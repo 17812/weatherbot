@@ -18,7 +18,9 @@ function getWeatherInfo(city, res, next){
 		let data = response.data;
 		let message = `
 		${city} : 
-		The day's High is ${data.main.temp_max}C with a Low of ${data.main.temp_min}C. The current conditions for ${city} are ${data.weather[0].description}.
+		The day's High is ${data.main.temp_max}C with a Low of ${data.main.temp_min}C. 
+		The atmospheric pressure in ${city} is ${data.main.temp_max}Pa with a wind speed of ${data.wind.speed}km/h.
+		The current conditions are ${data.weather[0].description}.
 		`;
 		sendResponse(message, 200, res);
 	})
