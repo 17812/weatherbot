@@ -1,0 +1,29 @@
+{
+  "name": "weatherbot",
+  "version": "1.0.0",
+  "description": "A chatbot for fetching weather info",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KwabenBerko/weatherbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KwabenBerko/weatherbot/issues"
+  },
+  "homepage": "https://github.com/KwabenBerko/weatherbot#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "colors": "^1.1.2"
+  }
+}
