@@ -13,12 +13,12 @@ function getWeatherInfo(city, res, next){
 	//Fetch Weather data for city
 	console.log("Request Started");
 	const url = 
-	`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${config.openweathermap.APPID}`
+	`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${config.openweathermap.APPID}&units=metric`;
 	axios.get(url).then(function(response){
 		let data = response.data;
 		let message = `
 		${city} : 
-		The day's High is ${data.main.temp_max} with a Low of ${data.main.temp_min}. The current conditions for ${city} are ${data.weather[0].description}.
+		The day's High is ${data.main.temp_max}C with a Low of ${data.main.temp_min}C. The current conditions for ${city} are ${data.weather[0].description}.
 		`;
 		sendResponse(message, 200, res);
 	})
